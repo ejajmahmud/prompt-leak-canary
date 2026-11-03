@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "prompt-leak-canary"
+version = "0.1.0"
+description = "High-entropy honeytokens and steganographic canary injector to catch prompt exfiltration"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Ejaj Mahmud", email = "dev@ejajmahmud.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[project.scripts]
+prompt-leak-canary = "prompt_leak_canary.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["prompt_leak_canary*"]
